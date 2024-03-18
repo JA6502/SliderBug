@@ -1,0 +1,38 @@
+﻿@rendermode InteractiveServer
+@using Microsoft.FluentUI.AspNetCore.Components
+<div class="my-component">
+    This component is defined in the <strong>OutsideSlider</strong> library.
+</div>
+
+
+<FluentSlider Label="Red:" Min="0" Max="255" Step="1" Orientation="@Orientation.Horizontal" @bind-Value=RedVal>
+    <FluentSliderLabel Position="0">0</FluentSliderLabel>
+    <FluentSliderLabel Position="255">255</FluentSliderLabel>
+</FluentSlider>
+<FluentLabel>@RedVal</FluentLabel>
+
+<FluentSlider Label="Blue:" Min="0" Max="255" Step="1" Orientation="@Orientation.Horizontal" @bind-Value=BlueVal>
+    <FluentSliderLabel Position="0">0</FluentSliderLabel>
+    <FluentSliderLabel Position="255">255</FluentSliderLabel>
+</FluentSlider>
+<FluentLabel>@BlueVal</FluentLabel>
+
+@code {
+
+    private int redVal;
+    private int RedVal
+    {
+        get => redVal; set
+        {
+            redVal = value;
+        }
+    }
+    private int blueVal;
+    private int BlueVal
+    {
+        get => blueVal; set
+        {
+            blueVal = value;
+        }
+    }
+}

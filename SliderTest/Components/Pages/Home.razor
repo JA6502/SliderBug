@@ -1,0 +1,15 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<FluentSlider Min="0" Max="100" Step="1" @bind-Value=value></FluentSlider>
+<Component1></Component1>
+
+Welcome to your new Fluent Blazor app.
+
+@code {
+    int value;
+}
